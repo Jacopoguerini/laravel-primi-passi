@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        "name" => "Jacopo",
+        "teams" => [
+            "Germania",
+            "Spagna",
+            "Italia",
+            "Francia",
+            "Unione Sovietica",
+            "Cecoslovacchia",
+            "Paesi Bassi",
+            "Danimarca",
+            "Grecia",
+            "Portogallo"
+        ]
+    ];
+    return view('home', $data);
 });
